@@ -23,7 +23,11 @@ GET, PUT, POST e DELETE
 
 ## 🛠️ Construído com
 
-* [Spring-boot](https://spring.io/projects/spring-boot) - O framework web usado
+* [Spring-boot](V-2.7.5)(https://spring.io/projects/spring-boot) - O framework web.
+* Java Version: V-17.0.0
+* Visual Studio Code
+* MySQL Workbench
+* Postman
 
 ## ✒️ Autores
 
@@ -39,7 +43,7 @@ Você também pode ver a lista de todos os [Trabalhos](https://github.com/marcel
 
 ## 📄 Licença
 
-Logo mais pegamos a licença
+GNU (GNU General Public License).
 
 ## 🎁 Expressões de gratidão
 
