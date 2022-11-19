@@ -1,4 +1,4 @@
-package com.go.dto;
+package com.go.learn.dto;
 
 public class GoLearnAlunoDto {
     private String nome;

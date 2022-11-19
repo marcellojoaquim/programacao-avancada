@@ -1,4 +1,4 @@
-package com.go.model;
+package com.go.learn.model;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -10,7 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.go.service.GoLearnAlunoService;
+import com.go.learn.service.GoLearnAlunoService;
+
+
 
 @Entity
 @Table(name = "Go_Learn_Aluno")

@@ -1,19 +1,34 @@
 package com.go.learn.model;
 
+import java.util.UUID;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
 
 
 @Entity
- public class DiaAula {
+@Table(name = "Dia_Aula")
+public class DiaAula {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID diaAula;
+    
+    public UUID getDiaAula() {
+        return diaAula;
+    }
+    public void setDiaAula(UUID diaAula) {
+        this.diaAula = diaAula;
+    }
+    @Column(nullable = false)
     private int curso_IdCurso;
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    @Column(nullable = false)
     private int dataAula;
     
     public int getCurso_IdCurso() {
