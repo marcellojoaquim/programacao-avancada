@@ -31,7 +31,7 @@ GET, PUT, POST e DELETE
 * **MARCELO** - *A DEFINIR TAREFA DE CADA* - (https://github.com/linkParaPerfil)
 * **WENNY** - *A DEFINIR TAREFA DE CADA* - (https://github.com/linkParaPerfil)
 * **LUCAS GABRIEL** - *A DEFINIR TAREFA DE CADA* - (https://github.com/Luqui17)
-* **FALVIO AUGUSTO** - *A DEFINIR TAREFA DE CADA* - (https://github.com/linkParaPerfil)
+* **FLÁVIO AUGUSTO** - *A DEFINIR TAREFA DE CADA* - (https://github.com/Flaviox625)
 * **RODRIGO LUIZ** - *A DEFINIR TAREFA DE CADA* - (https://github.com/linkParaPerfil)
 * **JOSE VANILDO** - *A DEFINIR TAREFA DE CADA* - (https://github.com/jvanildo)
 
