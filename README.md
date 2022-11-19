@@ -23,7 +23,7 @@ GET, PUT, POST e DELETE
 
 ## 🛠️ Construído com
 
-* [Spring-boot](https://spring.io/projects/spring-boot) (V-2.7.5)- O framework web.
+* [Spring-boot](https://spring.io/projects/spring-boot) V-2.7.5 - O framework web.
 * Java Version: V-17.0.0
 * Visual Studio Code
 * MySQL Workbench
