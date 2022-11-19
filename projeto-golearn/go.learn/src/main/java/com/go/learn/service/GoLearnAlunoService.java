@@ -1,8 +1,9 @@
-package com.go.service;
+package com.go.learn.service;
 
 import org.springframework.stereotype.Service;
 
-import com.go.repositories.GoLearnAlunoRepository;
+import com.go.learn.repository.GoLearnAlunoRepository;
+
 
 @Service
 public class GoLearnAlunoService {

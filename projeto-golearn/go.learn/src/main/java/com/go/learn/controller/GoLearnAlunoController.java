@@ -1,4 +1,4 @@
-package com.go.controller;
+package com.go.learn.controller;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.go.dto.GoLearnAlunoDto;
-import com.go.service.GoLearnAlunoService;
+import com.go.learn.dto.GoLearnAlunoDto;
+import com.go.learn.service.GoLearnAlunoService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -27,7 +28,7 @@ public class GoLearnAlunoController {
     }
     @PostMapping
     public ResponseEntity<Object> saveGolearn(@RequestBody @Validated GoLearnAlunoDto goLearnAlunoDto){
-        var GoLearnAlunoModel = new com.go.model.GoLearnAlunoModel();
+        var GoLearnAlunoModel = new com.go.learn.model.GoLearnAlunoModel();
         BeanUtils.copyProperties(goLearnAlunoDto, GoLearnAlunoModel );
         GoLearnAlunoModel.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
         return ResponseEntity.status(HttpStatus.CREATED).body(GoLearnAlunoModel.save(goLearnAlunoService));
