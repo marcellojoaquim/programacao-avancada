@@ -13,12 +13,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Dia_Aula")
-public class DiaAula {
+public class GoLearnDiaAula {
     
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID diaAula;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long diaAula;
 	
 
     @Column(nullable = false)
@@ -41,10 +41,10 @@ public class DiaAula {
     }
 
 
-    public UUID getDiaAula() {
+    public Long getDiaAula() {
         return diaAula;
     }
-    public void setDiaAula(UUID diaAula) {
+    public void setDiaAula(Long diaAula) {
         this.diaAula = diaAula;
     }
 

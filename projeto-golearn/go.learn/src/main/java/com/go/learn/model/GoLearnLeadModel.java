@@ -1,7 +1,6 @@
 package com.go.learn.model;
 
 
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -12,4 +12,5 @@ import com.go.learn.model.GoLearnAlunoModel;
 @Repository
 public interface GoLearnAlunoRepository extends JpaRepository <GoLearnAlunoModel,UUID>{
     
+    public GoLearnAlunoModel findByIdaluno(Long idaluno);
 }
