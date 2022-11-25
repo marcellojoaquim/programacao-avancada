@@ -1,4 +1,4 @@
-package com.go.learn.repositories;
+package com.go.learn.repository;
 
 public class GoLearnFeriadoRepository {
 }

@@ -39,12 +39,8 @@ public class DiaAula {
         this.dataAula = dataAula;
     }
 
-<<<<<<< Updated upstream
 
-    public UUID getDiaAula() {
-=======
     public Long getDiaAula() {
->>>>>>> Stashed changes
         return diaAula;
     }
     public void setDiaAula(Long diaAula) {
