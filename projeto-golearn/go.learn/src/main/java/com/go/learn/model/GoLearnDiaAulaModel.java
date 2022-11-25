@@ -1,6 +1,6 @@
 package com.go.learn.model;
 
-import java.util.UUID;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Dia_Aula")
-public class GoLearnDiaAula {
+public class GoLearnDiaAulaModel {
     
 
 	@Id
