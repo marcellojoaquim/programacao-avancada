@@ -1,6 +1,5 @@
 package com.go.learn.model;
 
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,8 +16,8 @@ public class DiaAula {
     
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID diaAula;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long diaAula;
 	
 
     @Column(nullable = false)
@@ -40,11 +39,15 @@ public class DiaAula {
         this.dataAula = dataAula;
     }
 
+<<<<<<< Updated upstream
 
     public UUID getDiaAula() {
+=======
+    public Long getDiaAula() {
+>>>>>>> Stashed changes
         return diaAula;
     }
-    public void setDiaAula(UUID diaAula) {
+    public void setDiaAula(Long diaAula) {
         this.diaAula = diaAula;
     }
 
