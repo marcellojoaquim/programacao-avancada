@@ -1,7 +1,7 @@
 package com.go.learn.model;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +18,8 @@ import com.go.learn.service.GoLearnAlunoService;
 @Table(name = "Go_Learn_Aluno")
 public class GoLearnAlunoModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID idaluno;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idaluno;
     @Column(nullable = false, length = 45)
     private String nome;
     @Column(nullable = false,unique = true, length = 20)
@@ -42,10 +42,10 @@ public class GoLearnAlunoModel {
     public void setTurmaId(Integer turmaId) {
         this.turmaId = turmaId;
     }
-    public UUID getIdaluno() {
+    public Long getIdaluno() {
         return idaluno;
     }
-    public void setIdaluno(UUID idaluno) {
+    public void setIdaluno(Long idaluno) {
         this.idaluno = idaluno;
     }
     public String getNome() {

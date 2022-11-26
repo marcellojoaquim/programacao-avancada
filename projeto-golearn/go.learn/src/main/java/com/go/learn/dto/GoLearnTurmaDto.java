@@ -2,14 +2,15 @@ package com.go.learn.dto;
 
 import com.go.learn.model.GoLearnAlunoModel;
 import com.go.learn.model.GoLearnCursoModel;
-import com.go.learn.model.Professor;
+import com.go.learn.model.GoLearnProfessorModel;
+import com.go.learn.model.GoLearnProfessorModel;
 
 public class GoLearnTurmaDto {
     private Long idTurma;
     private float valor;
     private GoLearnAlunoModel idAluno;
     private GoLearnCursoModel idCurso;
-    private Professor idProfessor;
+    private GoLearnProfessorModel idProfessor;
     private Integer seg;
     private Integer ter;
     private Integer qua;
@@ -70,10 +71,10 @@ public class GoLearnTurmaDto {
     public void setIdCurso(GoLearnCursoModel idCurso) {
         this.idCurso = idCurso;
     }
-    public Professor getIdProfessor() {
+    public GoLearnProfessorModel getIdProfessor() {
         return idProfessor;
     }
-    public void setIdProfessor(Professor idProfessor) {
+    public void setIdProfessor(GoLearnProfessorModel idProfessor) {
         this.idProfessor = idProfessor;
     }
     

@@ -1,6 +1,8 @@
 package com.go.learn.model;
 
-import java.util.UUID;
+
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,12 +15,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Dia_Aula")
-public class DiaAula {
+public class GoLearnDiaAulaModel {
     
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID diaAula;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Date diaAula;
 	
 
     @Column(nullable = false)
@@ -41,11 +43,11 @@ public class DiaAula {
     }
 
 
-    public UUID getDiaAula() {
+    public Date getDiaAula() {
         return diaAula;
     }
-    public void setDiaAula(UUID diaAula) {
+    public void setDiaAula(Date diaAula) {
         this.diaAula = diaAula;
-    }
+}
 
-}    
+}

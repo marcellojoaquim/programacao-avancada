@@ -50,7 +50,7 @@ public class GoLearnTurmaModel implements Serializable{
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Professor idProfessor;
+    private GoLearnProfessorModel idProfessor;
 
     public Long getIdTurma() {
         return idTurma;
@@ -132,11 +132,11 @@ public class GoLearnTurmaModel implements Serializable{
         this.idCurso = idCurso;
     }
 
-    public Professor getIdProfessor() {
+    public GoLearnProfessorModel getIdProfessor() {
         return idProfessor;
     }
 
-    public void setIdProfessor(Professor idProfessor) {
+    public void setIdProfessor(GoLearnProfessorModel idProfessor) {
         this.idProfessor = idProfessor;
     }
     
