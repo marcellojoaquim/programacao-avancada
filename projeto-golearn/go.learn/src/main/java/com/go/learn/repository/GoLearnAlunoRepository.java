@@ -10,6 +10,5 @@ import com.go.learn.model.GoLearnAlunoModel;
 
 @Repository
 public interface GoLearnAlunoRepository extends JpaRepository <GoLearnAlunoModel,Long>{
-    List<GoLearnAlunoModel> findByCpf(String cpf);
     // boolean existsByCpfAluno(String cpf);
 }

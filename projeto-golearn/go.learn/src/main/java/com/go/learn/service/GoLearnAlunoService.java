@@ -29,15 +29,13 @@ public class GoLearnAlunoService {
     public Optional<GoLearnAlunoModel> findById(Long id) {
         return goLearnAlunoRepository.findById(id);
     }
-    public List<GoLearnAlunoModel> findBycpf(String cpf) {
-        return goLearnAlunoRepository.findByCpf(cpf);
-    }
     @Transactional
     public void deletar(GoLearnAlunoModel goLearnAlunoModel) {
         goLearnAlunoRepository.delete(goLearnAlunoModel);
     }
 
-    // public boolean alunoExistente(String cpf){
-    //     return goLearnAlunoRepository.existsByCpfAluno(cpf);
-    // }
+    // @Transactional
+    // public boolean cursoExistente(String cpf) {
+	// 	return goLearnAlunoRepository.existsByCpfAluno(cpf);
+	// }
 }

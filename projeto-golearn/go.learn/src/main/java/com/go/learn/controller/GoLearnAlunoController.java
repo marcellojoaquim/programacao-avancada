@@ -66,9 +66,9 @@ public class GoLearnAlunoController {
 
     @PostMapping
     public ResponseEntity<Object> salvarAluno(@RequestBody @Valid GoLearnAlunoDto goLearnAlunoDto){
-        // if(goLearnAlunoService.alunoExistente(goLearnAlunoDto.getCpf())){
-        //     return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflito: CPF já está em uso.");
-        // }
+        // if(goLearnAlunoService.cursoExistente(goLearnAlunoDto.getCpf())) {
+		// 	return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflito: Nome já está em uso");
+		// }
         var goLearnAlunoModel = new GoLearnAlunoModel();
         BeanUtils.copyProperties(goLearnAlunoDto, goLearnAlunoModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(goLearnAlunoService.save(goLearnAlunoModel));
