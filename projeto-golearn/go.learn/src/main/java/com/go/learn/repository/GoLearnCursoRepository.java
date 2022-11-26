@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.go.learn.model.GoLearnCursoModel;
 
 @Repository
-public interface CursoRepository extends JpaRepository<GoLearnCursoModel, Long> {
+public interface GoLearnCursoRepository extends JpaRepository<GoLearnCursoModel, Long> {
 
 	boolean existsByNomeCurso(String nomeCurso);
 }

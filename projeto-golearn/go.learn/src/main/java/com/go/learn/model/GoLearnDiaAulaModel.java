@@ -1,6 +1,7 @@
 package com.go.learn.model;
 
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Dia_Aula")
-public class DiaAula {
+public class GoLearnDiaAulaModel {
     
 
 	@Id
@@ -45,6 +46,6 @@ public class DiaAula {
     }
     public void setDiaAula(Long diaAula) {
         this.diaAula = diaAula;
-    }
+    }
 
-}    
+}
