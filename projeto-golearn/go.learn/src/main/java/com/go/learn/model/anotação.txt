@@ -1,5 +1,0 @@
-classes que precisam de crud 
-aluno
-professor
-diaaula
-curso

@@ -11,5 +11,5 @@ public class GoLearnDiaAulaService {
 
     public GoLearnDiaAulaService(GoLearnDiaAulaRepository goLearnDiaAulaRepository){
         this.goLearnDiaAulaRepository = goLearnDiaAulaRepository;
-    }
+}
 }

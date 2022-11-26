@@ -6,13 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class GoLearnProfessor {
+@Table(name = "professor")
+public class GoLearnProfessorModel {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     
     @Column(nullable = false)
@@ -49,5 +51,14 @@ public class GoLearnProfessor {
     public void setValorHoraAula(float valorHoraAula) {
         this.valorHoraAula = valorHoraAula;
     }
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+    
     
 }

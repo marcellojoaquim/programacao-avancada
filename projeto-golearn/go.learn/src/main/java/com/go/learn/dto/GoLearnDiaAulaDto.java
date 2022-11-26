@@ -1,9 +1,11 @@
 package com.go.learn.dto;
 
+import java.util.Date;
+
 public class GoLearnDiaAulaDto {
 
     private int curso_IdCurso;
-    private int dataAula;
+    private Date dataAula;
 
     public int getCurso_IdCurso() {
         return curso_IdCurso;
@@ -11,13 +13,10 @@ public class GoLearnDiaAulaDto {
     public void setCurso_IdCurso(int curso_IdCurso) {
         this.curso_IdCurso = curso_IdCurso;
     }
-    public int getDataAula() {
+    public Date getDataAula() {
         return dataAula;
     }
-    public void setDataAula(int dataAula) {
+    public void setDataAula(Date dataAula) {
         this.dataAula = dataAula;
-    }
-
-    
-    
+  }
 }
