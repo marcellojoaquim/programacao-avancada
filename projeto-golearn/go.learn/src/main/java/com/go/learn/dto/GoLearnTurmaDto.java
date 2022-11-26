@@ -3,7 +3,6 @@ package com.go.learn.dto;
 import com.go.learn.model.GoLearnAlunoModel;
 import com.go.learn.model.GoLearnCursoModel;
 import com.go.learn.model.GoLearnProfessorModel;
-import com.go.learn.model.GoLearnProfessorModel;
 
 public class GoLearnTurmaDto {
     private Long idTurma;
