@@ -12,7 +12,8 @@ import com.go.learn.repository.GoLearnAlunoRepository;
 
 @Service
 public class GoLearnAlunoService {
-    public final GoLearnAlunoRepository goLearnAlunoRepository;
+   
+    final GoLearnAlunoRepository goLearnAlunoRepository;
 
     public GoLearnAlunoService(GoLearnAlunoRepository goLearnAlunoRepository){
         this.goLearnAlunoRepository = goLearnAlunoRepository;
@@ -34,8 +35,7 @@ public class GoLearnAlunoService {
         goLearnAlunoRepository.delete(goLearnAlunoModel);
     }
 
-    // @Transactional
-    // public boolean cursoExistente(String cpf) {
-	// 	return goLearnAlunoRepository.existsByCpfAluno(cpf);
-	// }
+    // public boolean existsByCpfAluno(String cpf) {
+	//	return goLearnAlunoRepository.existsByCpfAluno(cpf);
+	//}
 }
