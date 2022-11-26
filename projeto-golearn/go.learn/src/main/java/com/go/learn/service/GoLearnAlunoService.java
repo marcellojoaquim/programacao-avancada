@@ -1,7 +1,12 @@
 package com.go.learn.service;
 
 import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
+import javax.transaction.Transactional;
+
+import com.go.learn.model.GoLearnAlunoModel;
 import com.go.learn.repository.GoLearnAlunoRepository;
 
 
@@ -12,4 +17,27 @@ public class GoLearnAlunoService {
     public GoLearnAlunoService(GoLearnAlunoRepository goLearnAlunoRepository){
         this.goLearnAlunoRepository = goLearnAlunoRepository;
     }
+
+    public List<GoLearnAlunoModel> findAll(){
+        return goLearnAlunoRepository.findAll();
+    }
+
+    @Transactional
+    public GoLearnAlunoModel save(GoLearnAlunoModel goLearnAlunoModel){
+        return goLearnAlunoRepository.save(goLearnAlunoModel);
+    }
+    public Optional<GoLearnAlunoModel> findById(Long id) {
+        return goLearnAlunoRepository.findById(id);
+    }
+    public List<GoLearnAlunoModel> findBycpf(String cpf) {
+        return goLearnAlunoRepository.findByCpf(cpf);
+    }
+    @Transactional
+    public void deletar(GoLearnAlunoModel goLearnAlunoModel) {
+        goLearnAlunoRepository.delete(goLearnAlunoModel);
+    }
+
+    // public boolean alunoExistente(String cpf){
+    //     return goLearnAlunoRepository.existsByCpfAluno(cpf);
+    // }
 }
