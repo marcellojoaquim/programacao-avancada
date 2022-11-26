@@ -1,8 +1,10 @@
 package com.go.learn.model;
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.Column;
+import javax.persistence.Id;
+
 import java.io.Serializable;
 import java.util.Date;
 

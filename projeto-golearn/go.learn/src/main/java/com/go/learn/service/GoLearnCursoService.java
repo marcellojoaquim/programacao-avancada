@@ -8,14 +8,14 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.go.learn.model.GoLearnCursoModel;
-import com.go.learn.repository.CursoRepository;
+import com.go.learn.repository.GoLearnCursoRepository;
 
 @Service
 public class GoLearnCursoService {
 
-	final CursoRepository cursoRepository;
+	final GoLearnCursoRepository cursoRepository;
 	
-	public GoLearnCursoService(CursoRepository cursoRepository) {
+	public GoLearnCursoService(GoLearnCursoRepository cursoRepository) {
 		this.cursoRepository = cursoRepository;
 	}
 	

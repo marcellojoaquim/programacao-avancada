@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/golearn")
+@RequestMapping("/golearn/aluno")
 public class GoLearnAlunoController {
     final GoLearnAlunoService goLearnAlunoService;
     public GoLearnAlunoController(GoLearnAlunoService goLearnAlunoService){
