@@ -77,6 +77,7 @@ public class GoLearnCursoController {
 		var goLearnCursoModel = new GoLearnCursoModel();
 		BeanUtils.copyProperties(goLearnCursoDto, goLearnCursoModel);
 		goLearnCursoModel.setId(goLearnCursoModelOptional.get().getId());
-		return ResponseEntity.status(HttpStatus.OK).body(goLearnCursoService.save(goLearnCursoModel));
+		return ResponseEntity.status(HttpStatus.OK).body(goLearnCursoService.save(goLearnCursoModel));	
 	}
+	
 }
