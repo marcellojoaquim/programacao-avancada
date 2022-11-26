@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "Dia_Aula")
+@Table(name = "aula")
 public class GoLearnDiaAulaModel {
     
 

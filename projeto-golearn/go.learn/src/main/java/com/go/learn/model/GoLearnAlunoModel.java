@@ -15,7 +15,7 @@ import com.go.learn.service.GoLearnAlunoService;
 
 
 @Entity
-@Table(name = "Go_Learn_Aluno")
+@Table(name = "aluno")
 public class GoLearnAlunoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

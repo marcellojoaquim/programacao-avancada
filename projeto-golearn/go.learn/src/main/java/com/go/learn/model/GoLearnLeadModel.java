@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name = "GO_LEARN_LEAD")
+@Table(name = "lead")
 public class GoLearnLeadModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
