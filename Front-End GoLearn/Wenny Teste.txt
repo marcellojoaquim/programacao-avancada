@@ -1,0 +1,16 @@
+datas {
+  overflow:hidden;
+}
+.calendario {
+  float:left;
+  width:30%;
+}
+.professores {
+  float:right;
+  width:30%;
+}
+.calendario div,
+.professores div {
+  border:1px solid red;
+  padding:10px;
+} Shw
