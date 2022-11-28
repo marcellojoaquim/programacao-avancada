@@ -1,7 +1,7 @@
 package com.go.learn.model;
 
 import java.util.Date;
-import java.time.LocalDateTime;
+
 
 
 import javax.persistence.Column;
@@ -10,9 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.go.learn.service.GoLearnAlunoService;
-
 
 
 @Entity
@@ -27,8 +24,9 @@ public class GoLearnAlunoModel {
     private String telefone;
     @Column(nullable = false)
     private String endereco;
-    @Column(nullable = false, unique = true)
+    @Column(length = 20)
     private String cpf;
+    
     // @Column(nullable = false, unique = true)
     // private Integer turmaId;
     // @Column(nullable = false) 
@@ -76,7 +74,5 @@ public class GoLearnAlunoModel {
     public void setRegistrationDate(Date registrationDate) {
       this.registrationDate = registrationDate;
     }
-
-    
 
 }

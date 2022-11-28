@@ -15,6 +15,8 @@ import javax.persistence.Table;
 @Table(name = "turma")
 public class GoLearnTurmaModel implements Serializable{
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTurma;
@@ -41,15 +43,15 @@ public class GoLearnTurmaModel implements Serializable{
     private Integer sab;
  
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(name = "idAluno")
     private GoLearnAlunoModel idAluno;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(name = "idCurso")
     private GoLearnCursoModel idCurso;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(name = "idProfessor")
     private GoLearnProfessorModel idProfessor;
 
     public Long getIdTurma() {
