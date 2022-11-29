@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -18,15 +20,23 @@ public class GoLearnAlunoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idaluno;
+
     @Column(nullable = false)
     private String nome;
+
     @Column(nullable = false,unique = true)
     private String telefone;
+
     @Column(nullable = false)
     private String endereco;
+
     @Column(length = 20)
     private String cpf;
     
+    @ManyToOne
+    @JoinColumn(name = "turmas")
+    private GoLearnTurmaModel turma;
+
     // @Column(nullable = false, unique = true)
     // private Integer turmaId;
     // @Column(nullable = false) 
@@ -75,4 +85,10 @@ public class GoLearnAlunoModel {
       this.registrationDate = registrationDate;
     }
 
+    public GoLearnTurmaModel getTurma() {
+        return turma;
+    }
+    public void setTurma(GoLearnTurmaModel turma) {
+        this.turma = turma;
+    }
 }

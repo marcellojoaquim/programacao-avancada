@@ -6,5 +6,6 @@ import com.go.learn.model.GoLearnTurmaModel;
 
 @Repository
 public interface GoLearnTurmaRepository extends JpaRepository<GoLearnTurmaModel, Long>{
-    
+    boolean existsBynomeTurma(String nomeTurma); 
+
 }

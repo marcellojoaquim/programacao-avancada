@@ -36,7 +36,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class GoLearnAlunoController {
     
     @Autowired
-    private GoLearnSmsService smsService;
+    private GoLearnSmsService goLearnSmsService;
 
     final GoLearnAlunoService goLearnAlunoService;
     
@@ -46,7 +46,7 @@ public class GoLearnAlunoController {
     
     @GetMapping("/{id}/notification")
     public void notifySms(@PathVariable Long id){
-        smsService.enviarSms(id);
+        goLearnSmsService.enviarSms(id);
     }
 
     @GetMapping
@@ -83,13 +83,14 @@ public class GoLearnAlunoController {
         var goLearnAlunoModel = new GoLearnAlunoModel();
         BeanUtils.copyProperties(goLearnAlunoDto, goLearnAlunoModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(goLearnAlunoService.save(goLearnAlunoModel));
+        
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deletarAluno(@PathVariable(value = "id") long id){
         Optional<GoLearnAlunoModel> goLearnAlunoModelOptional = goLearnAlunoService.findById(id);
         goLearnAlunoService.deletar(goLearnAlunoModelOptional.get());
-        return ResponseEntity.status(HttpStatus.OK).body("Curso deletado com sucesso!");
+        return ResponseEntity.status(HttpStatus.OK).body("Aluno deletado com sucesso!");
     } 
     
 }

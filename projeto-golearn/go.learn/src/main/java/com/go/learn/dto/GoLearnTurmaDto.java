@@ -1,12 +1,16 @@
 package com.go.learn.dto;
 
+import java.util.List;
+
 import com.go.learn.model.GoLearnAlunoModel;
 import com.go.learn.model.GoLearnCursoModel;
 import com.go.learn.model.GoLearnProfessorModel;
 
 public class GoLearnTurmaDto {
     private Long idTurma;
+    private String nomeTurma;
     private float valor;
+    private List<GoLearnAlunoModel> Alunos;
     private GoLearnAlunoModel idAluno;
     private GoLearnCursoModel idCurso;
     private GoLearnProfessorModel idProfessor;
@@ -24,6 +28,12 @@ public class GoLearnTurmaDto {
     }
     public Integer getTer() {
         return ter;
+    }
+    public List<GoLearnAlunoModel> getAlunos() {
+        return Alunos;
+    }
+    public void setAlunos(List<GoLearnAlunoModel> alunos) {
+        Alunos = alunos;
     }
     public void setTer(Integer ter) {
         this.ter = ter;
@@ -76,5 +86,10 @@ public class GoLearnTurmaDto {
     public void setIdProfessor(GoLearnProfessorModel idProfessor) {
         this.idProfessor = idProfessor;
     }
-    
+    public String getNomeTurma() {
+        return nomeTurma;
+    }
+    public void setNomeTurma(String nomeTurma) {
+        this.nomeTurma = nomeTurma;
+    }
 }
