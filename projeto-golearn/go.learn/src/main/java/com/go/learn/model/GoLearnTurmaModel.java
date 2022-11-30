@@ -1,6 +1,7 @@
 package com.go.learn.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,15 +10,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "turma")
 public class GoLearnTurmaModel implements Serializable{
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTurma;
+
+    @Column
+    private String nomeTurma;
 
     @Column(precision = 6, scale = 2)
     private float valor;
@@ -40,16 +47,16 @@ public class GoLearnTurmaModel implements Serializable{
     @Column
     private Integer sab;
  
-    @ManyToOne
-    @JoinColumn(nullable = false)
-    private GoLearnAlunoModel idAluno;
+    @OneToMany
+    @JoinColumn(name = "alunos")
+    private List<GoLearnAlunoModel> Alunos;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
-    private GoLearnCursoModel idCurso;
+    @JoinColumn
+    private GoLearnCursoModel id;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn
     private GoLearnProfessorModel idProfessor;
 
     public Long getIdTurma() {
@@ -116,20 +123,21 @@ public class GoLearnTurmaModel implements Serializable{
         this.sab = sab;
     }
 
-    public GoLearnAlunoModel getIdAluno() {
-        return idAluno;
+
+    public List<GoLearnAlunoModel> getAlunos() {
+        return Alunos;
     }
 
-    public void setIdAluno(GoLearnAlunoModel idAluno) {
-        this.idAluno = idAluno;
+    public void setAlunos(List<GoLearnAlunoModel> alunos) {
+        Alunos = alunos;
     }
 
-    public GoLearnCursoModel getIdCurso() {
-        return idCurso;
+    public GoLearnCursoModel getId() {
+        return id;
     }
 
-    public void setIdCurso(GoLearnCursoModel idCurso) {
-        this.idCurso = idCurso;
+    public void setId(GoLearnCursoModel id) {
+        this.id = id;
     }
 
     public GoLearnProfessorModel getIdProfessor() {
@@ -139,5 +147,14 @@ public class GoLearnTurmaModel implements Serializable{
     public void setIdProfessor(GoLearnProfessorModel idProfessor) {
         this.idProfessor = idProfessor;
     }
+
+    public String getNomeTurma() {
+        return nomeTurma;
+    }
+
+    public void setNomeTurma(String nomeTurma) {
+        this.nomeTurma = nomeTurma;
+    }
+    
     
 }

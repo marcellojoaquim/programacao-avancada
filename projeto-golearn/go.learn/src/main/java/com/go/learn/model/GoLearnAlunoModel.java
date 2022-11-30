@@ -1,6 +1,7 @@
 package com.go.learn.model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
+
 
 
 import javax.persistence.Column;
@@ -8,10 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.go.learn.service.GoLearnAlunoService;
-
 
 
 @Entity
@@ -20,27 +20,33 @@ public class GoLearnAlunoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idaluno;
-    @Column(nullable = false, length = 45)
-    private String nome;
-    @Column(nullable = false,unique = true, length = 20)
-    private String telefone;
-    @Column(nullable = false,length = 45)
-    private String endereco;
-    @Column(nullable = false, unique = true,length = 20)
-    private String cpf;
+
+    @Column
+    private String email;
+
+    @Column
+    private String senha;
+
     @Column(nullable = false)
-    private Integer turmaId;
-    @Column(nullable = true) 
-    private LocalDateTime registrationDate;
+    private String nome;
+
+    @Column(nullable = false,unique = true)
+    private String telefone;
+
+    @Column(nullable = false)
+    private String endereco;
+
+    @Column(length = 20)
+    private String cpf;
     
-    public LocalDateTime getRegistrationDate() {
+    @ManyToOne
+    @JoinColumn(name = "turmas")
+    private GoLearnTurmaModel turma;
+ 
+    private Date registrationDate = new Date();
+    
+    public Date getRegistrationDate() {
         return registrationDate;
-    }
-    public Integer getTurmaId() {
-        return turmaId;
-    }
-    public void setTurmaId(Integer turmaId) {
-        this.turmaId = turmaId;
     }
     public Long getIdaluno() {
         return idaluno;
@@ -72,13 +78,14 @@ public class GoLearnAlunoModel {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    public void setRegistrationDate(LocalDateTime registrationDate) {
+    public void setRegistrationDate(Date registrationDate) {
       this.registrationDate = registrationDate;
     }
-    public Object save(GoLearnAlunoService goLearnAlunoService) {
-        return goLearnAlunoService.goLearnAlunoRepository.save(this);
+
+    public GoLearnTurmaModel getTurma() {
+        return turma;
     }
-
-    
-
+    public void setTurma(GoLearnTurmaModel turma) {
+        this.turma = turma;
+    }
 }

@@ -2,7 +2,6 @@ package com.go.learn.model;
 
 
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +19,7 @@ public class GoLearnDiaAulaModel {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Date diaAula;
+    private Long diaAula;
 	
 
     @Column(nullable = false)
@@ -43,10 +42,10 @@ public class GoLearnDiaAulaModel {
     }
 
 
-    public Date getDiaAula() {
+    public Long getDiaAula() {
         return diaAula;
     }
-    public void setDiaAula(Date diaAula) {
+    public void setDiaAula(Long diaAula) {
         this.diaAula = diaAula;
 }
 

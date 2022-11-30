@@ -27,7 +27,7 @@ import com.go.learn.model.GoLearnCursoModel;
 import com.go.learn.service.GoLearnCursoService;
 
 @RestController
-@RequestMapping(value = "/cursos")
+@RequestMapping(value = "/golearn/cursos")
 public class GoLearnCursoController {
 
 	
