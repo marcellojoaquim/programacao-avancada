@@ -21,6 +21,12 @@ public class GoLearnAlunoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idaluno;
 
+    @Column
+    private String email;
+
+    @Column
+    private String senha;
+
     @Column(nullable = false)
     private String nome;
 
@@ -36,21 +42,12 @@ public class GoLearnAlunoModel {
     @ManyToOne
     @JoinColumn(name = "turmas")
     private GoLearnTurmaModel turma;
-
-    // @Column(nullable = false, unique = true)
-    // private Integer turmaId;
-    // @Column(nullable = false) 
+ 
     private Date registrationDate = new Date();
     
     public Date getRegistrationDate() {
         return registrationDate;
     }
-    // public Integer getTurmaId() {
-    //     return turmaId;
-    // }
-    // public void setTurmaId(Integer turmaId) {
-    //     this.turmaId = turmaId;
-    // }
     public Long getIdaluno() {
         return idaluno;
     }
