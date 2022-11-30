@@ -59,7 +59,7 @@ public class GoLearnProfessorController {
 	public ResponseEntity<Object> deletarCurso(@PathVariable(value="id") Long id){
 		Optional<GoLearnProfessorModel> goLearnCursoModelOptional = professorservice.findById(id);
 		professorservice.deletar(goLearnCursoModelOptional.get());
-		return ResponseEntity.status(HttpStatus.OK).body("Curso deletado com sucesso !");
+		return ResponseEntity.status(HttpStatus.OK).body("Professor deletado com sucesso!");
 	}
 
     @PutMapping("/{id}")

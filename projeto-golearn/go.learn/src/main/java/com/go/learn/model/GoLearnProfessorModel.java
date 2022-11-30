@@ -17,7 +17,7 @@ public class GoLearnProfessorModel {
     private Long id;
 
     
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String nome;
 
     @Column
