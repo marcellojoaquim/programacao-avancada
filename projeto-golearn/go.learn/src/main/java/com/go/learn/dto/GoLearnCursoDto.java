@@ -14,18 +14,6 @@ public class GoLearnCursoDto {
 	
 	private Float valor;
 	
-	private Integer seg;
-	
-	private Integer ter;
-	 
-	private Integer qua;
-	
-	private Integer qui;
-	
-	private Integer sex;
-	
-	private Integer sab;
-
 	public String getNomeCurso() {
 		return nomeCurso;
 	}
@@ -66,53 +54,6 @@ public class GoLearnCursoDto {
 		this.valor = valor;
 	}
 
-	public Integer getSeg() {
-		return seg;
-	}
 
-	public void setSeg(Integer seg) {
-		this.seg = seg;
-	}
-
-	public Integer getTer() {
-		return ter;
-	}
-
-	public void setTer(Integer ter) {
-		this.ter = ter;
-	}
-
-	public Integer getQua() {
-		return qua;
-	}
-
-	public void setQua(Integer qua) {
-		this.qua = qua;
-	}
-
-	public Integer getQui() {
-		return qui;
-	}
-
-	public void setQui(Integer qui) {
-		this.qui = qui;
-	}
-
-	public Integer getSex() {
-		return sex;
-	}
-
-	public void setSex(Integer sex) {
-		this.sex = sex;
-	}
-
-	public Integer getSab() {
-		return sab;
-	}
-
-	public void setSab(Integer sab) {
-		this.sab = sab;
-	}
-	
 	
 }

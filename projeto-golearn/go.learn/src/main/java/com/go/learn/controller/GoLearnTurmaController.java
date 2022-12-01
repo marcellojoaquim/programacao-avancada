@@ -42,11 +42,17 @@ public class GoLearnTurmaController {
     @GetMapping("/{id}")
     public ResponseEntity<Object> encontrarTurmaEspecifica(@PathVariable(value = "id") Long id){
         Optional<GoLearnTurmaModel> goLearnTurmaModelOptional = goLearnTurmaService.findById(id);
+        if(!goLearnTurmaModelOptional.isPresent()) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado...");
+		}
         return ResponseEntity.status(HttpStatus.OK).body(goLearnTurmaModelOptional.get());
     } 
 
     @PostMapping
     public ResponseEntity<Object>salvarTurma(@RequestBody @Valid GoLearnTurmaDto goLearnTurmaDto){
+        if(goLearnTurmaService.existsBynomeTurma(goLearnTurmaDto.getNomeTurma())) {
+			return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflito: Nome já está em uso");
+		}
         var goLearnTurmaModel = new GoLearnTurmaModel();
 		BeanUtils.copyProperties(goLearnTurmaDto, goLearnTurmaModel);
 		return ResponseEntity.status(HttpStatus.CREATED).body(goLearnTurmaService.salvarTurma(goLearnTurmaModel));
