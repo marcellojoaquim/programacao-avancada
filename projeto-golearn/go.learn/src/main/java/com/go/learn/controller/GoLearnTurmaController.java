@@ -39,7 +39,7 @@ public class GoLearnTurmaController {
     public ResponseEntity<Object> encontrarTurmaEspecifica(@PathVariable(value = "id") Long id){
         Optional<GoLearnTurmaModel> goLearnTurmaModelOptional = goLearnTurmaService.findById(id);
         if(!goLearnTurmaModelOptional.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado...");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Turma não encontrada...");
 		}
         return ResponseEntity.status(HttpStatus.OK).body(goLearnTurmaModelOptional.get());
     } 
