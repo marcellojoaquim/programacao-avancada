@@ -1,5 +1,4 @@
 package com.go.learn.repository;
-
 import com.go.learn.model.GoLearnFeriadoModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 

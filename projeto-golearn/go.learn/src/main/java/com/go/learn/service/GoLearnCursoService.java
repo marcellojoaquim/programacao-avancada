@@ -1,12 +1,8 @@
 package com.go.learn.service;
-
 import java.util.List;
 import java.util.Optional;
-
 import javax.transaction.Transactional;
-
 import org.springframework.stereotype.Service;
-
 import com.go.learn.model.GoLearnCursoModel;
 import com.go.learn.repository.GoLearnCursoRepository;
 

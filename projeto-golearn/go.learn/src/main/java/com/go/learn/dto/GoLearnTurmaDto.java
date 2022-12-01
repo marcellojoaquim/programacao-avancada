@@ -1,7 +1,5 @@
 package com.go.learn.dto;
-
 import java.util.List;
-
 import com.go.learn.model.GoLearnAlunoModel;
 import com.go.learn.model.GoLearnCursoModel;
 import com.go.learn.model.GoLearnProfessorModel;

@@ -1,6 +1,4 @@
 package com.go.learn.controller;
-
-
 import com.go.learn.dto.GoLearnLeadDto;
 import com.go.learn.model.GoLearnLeadModel;
 import com.go.learn.service.GoLearnLeadService;
@@ -8,7 +6,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
