@@ -4,6 +4,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import javax.persistence.Id;
+
 import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,19 +24,19 @@ public class GoLearnGeradorDePdfService {
   private GoLearnAlunoRepository goLearnAlunoRepository;
 
   public Document getPdf(String nome) {
-    Aluno aluno = GoLearnAlunoRepository.findByNome(nome);
+    Aluno aluno = GoLearnAlunoRepository.findById();
     Document document = new Document();
 
       try {
 
-        PdfWriter.getInstance(document, new FileOutputStream("/home/surfista/Downloads/demo/src/pdf" + pessoa.getNome() +".pdf"));
+        PdfWriter.getInstance(document, new FileOutputStream("C:\\Users\\flavi\\Contacts\\Documents\\GitHub\\programacao-avancada\\pdf " + pessoa.getNome() +".pdf"));
         document.open();
         document.setPageSize(PageSize.A3);
 
-        document.addHeader(pessoa.getNome(), "Contrato de Compra");
-        document.addAuthor("Marcelo Thomé");
+        document.addHeader(aluno.getNome(), "Certificado de conclusão de curso");
+        document.addAuthor("Go Learn");
         document.addCreationDate();
-        document.add(new Paragraph("Contrato de Venda - " + pessoa.getNome()));
+        document.add(new Paragraph("Prova de Conclusão de curso - " + aluno.getNome()));
         document.add(new Paragraph("Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
                 " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend" +
                 " quam adipiscing vitae proin sagittis. Pellentesque adipiscing commodo elit at imperdiet. Quis enim lobortis scelerisque fermentum dui faucibus. Leo duis ut diam quam nulla porttitor massa id. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Placerat in egestas erat imperdiet sed euismod nisi porta. Ut placerat orci nulla pellentesque dignissim enim. Ornare lectus sit amet est placerat in. Enim eu turpis egestas pretium aenean pharetra. Vestibulum sed arcu non odio euismod lacinia. Nunc faucibus a pellentesque sit. Fermentum iaculis eu non diam phasellus vestibulum.\n" +
@@ -61,8 +63,8 @@ public class GoLearnGeradorDePdfService {
   }
 
   public void getPdfHtml() throws IOException, DocumentException {
-    OutputStream os = new FileOutputStream("/home/surfista/Downloads/demo/src/hello.pdf");;
-    Html2Pdf.convert("<h1 style=\"font-family: Roboto, Helvetica, sans-serif;\">Contrato de Venda</h1>" +
+    OutputStream os = new FileOutputStream("C:\\Users\\flavi\\Contacts\\Documents\\GitHub\\programacao-avancada\\pdf");;
+    GoLearnHtml2PdfService.convert("<h1 style=\"font-family: Roboto, Helvetica, sans-serif;\">Contrato de Venda</h1>" +
                            "<p style=\"font-family:Roboto\">  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend\" +\n" +
             "                \" quam adipiscing vitae proin sagittis. Pellentesque adipiscing commodo elit at imperdiet. Quis enim lobortis scelerisque fermentum dui faucibus. Leo duis ut diam quam nulla porttitor massa id. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Placerat in egestas erat imperdiet sed euismod nisi porta. Ut placerat orci nulla pellentesque dignissim enim. Ornare lectus sit amet est placerat in. Enim eu turpis egestas pretium aenean pharetra. Vestibulum sed arcu non odio euismod lacinia. Nunc faucibus a pellentesque sit. Fermentum iaculis eu non diam phasellus vestibulum.</p>" , os);
     os.close();
