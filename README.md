@@ -1,22 +1,25 @@
 # Go Learn
-Nesse repositório serão encontrados os códigos utilizados na criação da aplicação utilizando o framework Java Spring Boot.
+É uma plataforma de cursos com o registro de alunos, professores, turmas, lead de alunos 
+para possíveis novos alunos. Nesse repositório encontra-se o código fonte da aplicação.
 
 ## 🚀 Começando
 
-Os requisitos serão implementados em um software criado pela equipe, nomeado Go Learn, que consistirá em uma plataforma virtual 
-de ensino onde o usuário não só poderá encontrar os cursos disponíveis na plataforma, como também conseguirá o acesso de outras informações no seu perfil 
-(aulas, professores etc.). 
+Os requisitos serão implementados em um software criado pela equipe, nomeado Go Learn, que consistirá em uma plataforma virtual de ensino onde o usuário não só poderá encontrar os cursos disponíveis na plataforma, como também conseguirá o acesso de outras informações no seu perfil (aulas, professores etc.). 
 
-### 📋 Pré-requisitos
+### 📋 Requisitos obrigatórios para implementação do projeto
 
-Os requisitos obrigatórios para essa a criação da aplicação são:
- 
+Os requisitos obrigatórios para a criação da aplicação são:
 
-* A implementação de relações entre classes predefinidas;  
+* Implementação do projeto utilizando o design pattern MVC.
+
+* Implementação das classes e interfaces: Lead, Aluno, Turma, Professor, Curso, DiaAula e Feriado.
+
+* A implementação de relações entre classes e interfaces utilizando boas práticas de Orientação a Objetos;  
 
 * Realizar as operações CRUD para as entidades utilizando o padrão REST API. 
 
-
+### EndPoints de acesso ao BackEnd
+* 
 ```
 GET, PUT, POST e DELETE
 ```
@@ -24,7 +27,7 @@ GET, PUT, POST e DELETE
 ## 🛠️ Construído com
 
 * [Spring-boot](https://spring.io/projects/spring-boot) V-2.7.5 - O framework web.
-* Java Version: V-17.0.0
+* Java : V-17.0.0
 * Visual Studio Code
 * MySQL Workbench
 * Postman
