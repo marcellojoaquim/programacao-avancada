@@ -1,18 +1,13 @@
 package com.go.learn.model;
-
 import java.util.Date;
-import java.time.LocalDateTime;
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.go.learn.service.GoLearnAlunoService;
-
 
 
 @Entity
@@ -21,28 +16,34 @@ public class GoLearnAlunoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idaluno;
+
+    @Column
+    private String email;
+
+    @Column
+    private String senha;
+
     @Column(nullable = false)
     private String nome;
+
     @Column(nullable = false,unique = true)
     private String telefone;
+
     @Column(nullable = false)
     private String endereco;
-    @Column(nullable = false, unique = true)
+
+    @Column(length = 20)
     private String cpf;
-    // @Column(nullable = false, unique = true)
-    // private Integer turmaId;
-    // @Column(nullable = false) 
+    
+    @ManyToOne
+    @JoinColumn(name = "turmas")
+    private GoLearnTurmaModel turma;
+ 
     private Date registrationDate = new Date();
     
     public Date getRegistrationDate() {
         return registrationDate;
     }
-    // public Integer getTurmaId() {
-    //     return turmaId;
-    // }
-    // public void setTurmaId(Integer turmaId) {
-    //     this.turmaId = turmaId;
-    // }
     public Long getIdaluno() {
         return idaluno;
     }
@@ -77,6 +78,10 @@ public class GoLearnAlunoModel {
       this.registrationDate = registrationDate;
     }
 
-    
-
+    public GoLearnTurmaModel getTurma() {
+        return turma;
+    }
+    public void setTurma(GoLearnTurmaModel turma) {
+        this.turma = turma;
+    }
 }

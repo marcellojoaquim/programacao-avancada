@@ -1,12 +1,5 @@
 package com.go.learn.model;
-
-
-
-
-
-
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,23 +33,6 @@ public class GoLearnCursoModel implements Serializable{
 	@Column
 	private Float valor;
 	
-	@Column
-	private Integer seg;
-	
-	@Column
-	private Integer ter;
-	
-	@Column
-	private Integer qua;
-	
-	@Column
-	private Integer qui;
-	
-	@Column
-	private Integer sex;
-	
-	@Column
-	private Integer sab;
 	
 	public Long getId() {
 		return id;
@@ -106,51 +82,4 @@ public class GoLearnCursoModel implements Serializable{
 		this.valor = valor;
 	}
 
-	public Integer getSeg() {
-		return seg;
-	}
-
-	public void setSeg(Integer seg) {
-		this.seg = seg;
-	}
-
-	public Integer getTer() {
-		return ter;
-	}
-
-	public void setTer(Integer ter) {
-		this.ter = ter;
-	}
-
-	public Integer getQua() {
-		return qua;
-	}
-
-	public void setQua(Integer qua) {
-		this.qua = qua;
-	}
-
-	public Integer getQui() {
-		return qui;
-	}
-
-	public void setQui(Integer qui) {
-		this.qui = qui;
-	}
-
-	public Integer getSex() {
-		return sex;
-	}
-
-	public void setSex(Integer sex) {
-		this.sex = sex;
-	}
-
-	public Integer getSab() {
-		return sab;
-	}
-
-	public void setSab(Integer sab) {
-		this.sab = sab;
-	}
 }

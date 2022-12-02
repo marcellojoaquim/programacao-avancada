@@ -1,21 +1,21 @@
 package com.go.learn.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "professor")
-public class GoLearnProfessorModel {
+public class GoLearnProfessor {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
 
     
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String nome;
 
     @Column
@@ -49,14 +49,5 @@ public class GoLearnProfessorModel {
     public void setValorHoraAula(float valorHoraAula) {
         this.valorHoraAula = valorHoraAula;
     }
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-    
     
 }
