@@ -1,7 +1,7 @@
 package com.go.learn.dto;
 import java.util.Date;
 
-import java.util.Date;
+
 
 public class GoLearnDiaAulaDto {
 
