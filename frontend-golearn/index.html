@@ -1,34 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tela de Registo</title>
-  </head>
-  <body>
-    <!-- Main Container -->
-    <div class="container">
-      <!-- Form Container -->
-      <div class="form-wrap">
-        <h1>Signup Form</h1>
-        <div class="signup-box">
-          <div class="left-box">
-            <form action="#">
-              <input id = "aluno" type="text" placeholder=" Nome completo " class="form-control" />
-              <input type="text" placeholder=" Telefone " class="form-control" />
-              <input type="email" placeholder=" Email " class="form-control" />
-              <input type="password" placeholder=" Senha " class="form-control" />
-              <input onclick = Enviar() type = "submit" value = "Enviar"/>
-            </form>
-          </div>
-          <div class="right-box">
-            <img src="img/img.svg" alt="" />
-          </div>
-        </div>
-      </div>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./teste.js" defer></script>
+  <title>Testando</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Cadastro</h1>
+        <form action=""> 
+            <input type="text" class="nome" name="nome" placeholder="Nome">
+            <input type="text" class="email" name="email" placeholder="Email">
+            <input type="current-password" class="senha" name="senha" placeholder="Senha">
+            <input type="text" class="telefone" name="tel" placeholder="Telefone">
+            <button>Cadastrar</button>
+        </form>
     </div>
-    <script src = "teste.js"></script>
-  </body>
-</html
+</body>
+</html>
