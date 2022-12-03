@@ -25,6 +25,7 @@ GET, PUT, POST e DELETE
 
 * [Spring-boot](https://spring.io/projects/spring-boot) V-2.7.5 - O framework web.
 * Java Version: V-17.0.0
+* Html, Css e JavaScript
 * Visual Studio Code
 * MySQL Workbench
 * Postman
