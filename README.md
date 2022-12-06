@@ -19,10 +19,191 @@ Os requisitos obrigatórios para a criação da aplicação são:
 * Realizar as operações CRUD para as entidades utilizando o padrão REST API. 
 
 ### EndPoints de acesso ao BackEnd
-* 
-```
-GET, PUT, POST e DELETE
-```
+
+## Classe Curso
+### GET 
+* URL /golearn/cursos
+* URL /gotlearn/cursos/{id}
+
+### POST 
+* URL /golearn/cursos
+* BODY {"nomeCurso" : "String",
+        "chaula" : "float",
+        "chtotal" : "float",
+        "turno" : "String",
+        "valor" : "float"
+    }
+
+### PUT
+* URL /gotlearn/cursos/{id}
+* BODY {"nomeCurso" : "String",
+        "chaula" : "float",
+        "chtotal" : "float",
+        "turno" : "String",
+        "valor" : "float"
+    }
+
+### DELETE
+* URL /gotlearn/cursos/{id}
+
+## Classe Aluno
+
+### GET 
+* URL /golearn/aluno
+* URL /golearn/aluno/{id}
+### POST 
+* URL /golearn/aluno
+* BODY {"nome" : "String",
+        "telefone" : "int",
+        "cpf" : "int",
+        "endereco" : [ "rua" : "string,
+                        "numero" : "int",
+                        "bairro" : "string",
+                        "cidade" : "string"
+                        ]
+    }
+
+### PUT
+* URL /gotlearn/aluno/{id}
+* BODY {"nome" : "String",
+        "telefone" : "int",
+        "cpf" : "int",
+        "endereco" : [ "rua" : "string,
+                        "numero" : "int",
+                        "bairro" : "string",
+                        "cidade" : "string"
+                        ]
+    }
+
+### DELETE
+* URL /gotlearn/aluno/{id}
+
+## Classe Turma
+
+### GET 
+* URL /golearn/turma
+* URL /golearn/turma/{id}
+### POST 
+* URL /golearn/turma
+* BODY {"nomeTurma" : "String",
+        "valor" : "float",
+        "seg" : "int",
+        "ter" : "int",
+        "qua" : "int",
+        "qui" : "int",
+        "sex" : "int",
+        "sab" : "int",
+        "aluno" : ["nome" : "String",
+        "telefone" : "int",
+        "cpf" : "int",
+        "endereco" : [ "rua" : "string,
+                        "numero" : "int",
+                        "bairro" : "string",
+                        "cidade" : "string"
+                        ]
+                    ]
+    }
+
+### PUT
+* URL /gotlearn/turma/{id}
+* BODY {"nomeTurma" : "String",
+        "valor" : "float",
+        "seg" : "int",
+        "ter" : "int",
+        "qua" : "int",
+        "qui" : "int",
+        "sex" : "int",
+        "sab" : "int",
+        "aluno" : ["nome" : "String",
+        "telefone" : "int",
+        "cpf" : "int",
+        "endereco" : [ "rua" : "string,
+                        "numero" : "int",
+                        "bairro" : "string",
+                        "cidade" : "string"
+                        ]
+                    ]
+    }
+
+### DELETE
+* URL /gotlearn/turma/{id}
+
+## Classe Professor
+
+### GET 
+* URL /golearn/professor
+* URL /gotlearn/professor/{id}
+### POST 
+* URL /golearn/professor
+* BODY {"nomeCurso" : "String",
+        "chaula" : "float",
+        "chtotal" : "float",
+        "turno" : "String",
+        "valor" : "float"
+    }
+
+### PUT
+* URL /gotlearn/professor/{id}
+* BODY {"nomeCurso" : "String",
+        "chaula" : "float",
+        "chtotal" : "float",
+        "turno" : "String",
+        "valor" : "float"
+    }
+
+### DELETE
+* URL /gotlearn/professor/{id}
+
+## Classe Lead
+
+### GET 
+* URL /golearn/lead
+* URL /gotlearn/lead/{id}
+### POST 
+* URL /golearn/lead
+* BODY {"idLead" : "long",
+        "nome" : "string",
+        "telefone" : "int",
+        "dataCadastro" : "String",
+        "status_2" : "string",
+        "dataNovoCadastro" : "string",
+        "observacao" : "string"
+    }
+
+### PUT
+* URL /golearn/lead/{id}
+* BODY {"idLead" : "long",
+        "nome" : "string",
+        "telefone" : "int",
+        "dataCadastro" : "String",
+        "status_2" : "string",
+        "dataNovoCadastro" : "string",
+        "observacao" : "string"
+    }
+
+### DELETE
+* URL /gotlearn/lead/{id}
+
+## Classe Feriado
+
+### GET 
+* URL /golearn/feriado
+* URL /gotlearn/feriado/{id}
+### POST 
+* URL /golearn/feriado
+* BODY {"dataFeriado" : "string",
+        "descricao" : "string"
+    }
+
+### PUT
+* URL /gotlearn/feriado/{id}
+* BODY {"dataFeriado" : "string",
+        "descricao" : "string"
+    }
+
+### DELETE
+* URL /gotlearn/feriado/{id}
+
 
 ## 🛠️ Construído com
 
