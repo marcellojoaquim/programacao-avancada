@@ -1,5 +1,6 @@
 const formulario = document.querySelector("form");
 const Inome = document.querySelector(".nome");
+const Icpf = document.querySelector(".cpf");
 const Iemail = document.querySelector(".email");
 const Isenha = document.querySelector(".senha");
 const Itel = document.querySelector(".telefone");
@@ -16,6 +17,7 @@ function cadastrar() {
             method: "POST",
             body: JSON.stringify({ 
                 nome: Inome.value,
+                cpf: Icpf.value,
                 email: Iemail.value,
                 senha: Isenha.value,
                 telefone: Itel.value
@@ -31,6 +33,7 @@ function limpar() {
     Iemail.value = "";
     Isenha.value = "";
     Itel.value = "";
+    Icpf.value = "";
 };
 
 formulario.addEventListener('submit', function (event){
