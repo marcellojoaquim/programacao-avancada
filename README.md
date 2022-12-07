@@ -209,6 +209,7 @@ Os requisitos obrigatórios para a criação da aplicação são:
 
 * [Spring-boot](https://spring.io/projects/spring-boot) V-2.7.5 - O framework web.
 * Java : V-17.0.0
+* Html, Css e JavaScript
 * Visual Studio Code
 * MySQL Workbench
 * Postman
